@@ -1,1 +1,22 @@
 df -h
+
+to delete all logs but except one log --- -  find . -type f ! -name "UAServer.log" -delete
+
+to check with particular word -------- grep -r "required_word" .
+
+
+to replace the existing or word with new one ------------------grep -Rill '10.0.10.240' | xargs sed -i 's/10.0.10.240/10.0.10.30/g'
+
+to check the java process ----ps aux | grep java
+
+to check the proxy apache running ----ps aux | grep httpd
+
+to check the java process with process I'd & Paths----for pid in $(ps aux | grep '[j]ava' | awk '{print $2}'); do echo "PID: $pid"; pwdx $pid; echo; done
+
+
+
+ 
+ 
+ 
+
+
